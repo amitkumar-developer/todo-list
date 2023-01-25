@@ -1,0 +1,147 @@
+  
+  * {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  
+  input {
+    font-family: inherit;
+    font-size: 100%;
+    background: none;
+    border: 1px solid #000000;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 32px;
+  }
+
+  button {
+    font-size: 100%;
+    background: none;
+  }
+  
+  [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  button,
+  label {
+    cursor: pointer;
+  }
+  
+  ol {
+    list-style: none;
+  }
+  
+  body {
+    font: 28px/1.2 "Summer Bold";
+    margin: 1.5rem 0;
+  }
+  
+  .container {
+    max-width: 700px;
+    padding: 0 10px;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px #888888;
+    background: skyblue;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+
+  .todo-form .form-wrapper,
+  .todo-form input,
+  .todo-form button,
+  .todo-stats,
+  .todo-stats > div {
+    position: relative;
+  }
+  
+  .todo-form input,
+  .todo-form button,
+  .todo-stats > div {
+    z-index: 1;
+  }
+  
+  .todo-form input,
+  .todo-form button {
+    width: 100%;
+  }
+  
+  
+  
+  
+  .todo-stats {
+    text-align: center;
+    padding: 5px 10px;
+    margin: 10px 0;
+    color: var(--white);
+  }
+  
+  .todo-list li {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: auto 20px;
+    grid-column-gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .todo-list li + li {
+    margin-top: 10px;
+  }
+  
+  .todo-list .checkbox-wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .todo-list .checkbox-wrapper label {
+    display: grid;
+    margin-right: 10px;
+  }
+  
+  
+  
+  .todo-list .checkbox-wrapper .checkmark {
+    display: none;
+  }
+  
+  .todo-list [type="checkbox"]:checked + label .checkmark {
+    display: block;
+  }
+  
+  .todo-list [type="checkbox"]:checked ~ span {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  .todo-list .remove-task {
+    display: flex;
+    padding: 2px;
+  }
+  
+  
+  
+  @media screen and (min-width: 600px) {
+    .todo-form {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+     
+    }
+  
+    .todo-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
